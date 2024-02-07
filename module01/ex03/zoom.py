@@ -7,15 +7,16 @@ def ft_zoom(img_data: np.array, x: int, y: int, channel: int) -> np.array:
     height, width, _ = img_data.shape
     if x > width or y > height:
         return "Error: x, y"
-    print(f"New shape after resizing: ({x}, {y}, 3)")
-    img_cropped = img_data[:y, :x]
-    plt.imshow(img_cropped[:, :, channel], cmap='gray')
+    print(f"New shape after slicing: ({x}, {y}, {channel}) or ({x}, {y})")
+    img_cropped = img_data[:y, :x, :channel]
+    plt.imshow(img_cropped, cmap='gray')
     plt.show()
-    return img_cropped
+    return img_cropped[:]
 
 
 def main():
     img_data = ft_load("animal.jpeg")
+    print(img_data)
     print(ft_zoom(img_data, 400, 400, 1))
     return
 
