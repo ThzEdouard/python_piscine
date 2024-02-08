@@ -8,7 +8,7 @@ def ft_zoom(img_data: np.array, x: int, y: int, channel: int) -> np.array:
     if x > width or y > height:
         return "Error: x, y"
     print(f"New shape after slicing: ({x}, {y}, {channel}) or ({x}, {y})")
-    img_cropped = img_data[:y, :x, :channel]
+    img_cropped = img_data[:x, :y, :channel]
     plt.imshow(img_cropped, cmap='gray')
     plt.show()
     return img_cropped[:]
