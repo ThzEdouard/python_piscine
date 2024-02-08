@@ -8,12 +8,11 @@ def ft_rotate(img_data: np.array) -> np.array:
     print(f"New shape after Transpose: ({x}, {y})")
     plt.imshow(np.swapaxes(img_data, 0, 1), cmap="gray")
     plt.show()
-    return np.array(img_data)
+    return np.array(img_data)[:, :, 0]
 
 
 def main():
     img_array = ft_load("animal.jpeg", 400, 400, 1)
-    print(img_array)
     print(ft_rotate(img_array))
     return
 

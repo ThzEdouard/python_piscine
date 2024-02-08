@@ -16,7 +16,6 @@ def ft_zoom(img_data: np.array, x: int, y: int, channel: int) -> np.array:
 
 def main():
     img_data = ft_load("animal.jpeg")
-    print(img_data)
     print(ft_zoom(img_data, 400, 400, 1))
     return
 

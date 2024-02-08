@@ -13,5 +13,6 @@ def ft_load(path: str, x: int, y: int, channel: int) -> np.array:
     print(f"New shape after slicing: ({x}, {y}, {channel}) or ({x}, {y})")
     img_array = np.array(img)
     img_array = img_array[:x, :y, :channel]
+    print(img_array)
     img.close()
     return img_array

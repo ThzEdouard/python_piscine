@@ -10,5 +10,6 @@ def ft_load(path: str) -> np.array:
     h, w = img.size
     print(f"The shape of image is: ({w}, {h}, 3)")
     img_array = np.array(img)
+    print(img_array)
     img.close()
     return img_array
