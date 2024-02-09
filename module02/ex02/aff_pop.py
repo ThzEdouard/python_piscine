@@ -1,6 +1,5 @@
 from load_csv import load
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 def ft_graph_compare(load_file, country, versus) -> bool:
@@ -25,8 +24,6 @@ def ft_graph_compare(load_file, country, versus) -> bool:
     plt.ylabel("Population")
     plt.xlabel("Year")
     plt.xticks(x_column_filtered[::40])
-    y_ticks = np.arange(20, 71, 20)
-    plt.yticks(y_ticks, [f"{tick}M" for tick in y_ticks])
     plt.legend()
     plt.show()
     return True
