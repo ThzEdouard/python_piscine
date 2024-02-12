@@ -2,6 +2,7 @@ import sys
 
 
 def decode_string(string):
+    """alphnum to morse"""
     morse_dict = {
         'A': '.-',
         'B': '-...',
@@ -46,6 +47,7 @@ def decode_string(string):
 
 
 def main():
+    """starting"""
     try:
         if len(sys.argv) != 2:
             raise AssertionError("the arguments are bad")

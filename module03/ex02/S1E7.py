@@ -13,10 +13,12 @@ class Baratheon(Character):
         self.hairs = hairs
 
     def __str__(self):
-        return f"Vector : ('{type(self).__name__}', '{self.eyes}', '{self.hairs}')"
+        return f"Vector : ('{type(self).__name__}', '{self.eyes}', " \
+            f"'{self.hairs}')"
 
     def __repr__(self):
-        return f"Vector : ('{type(self).__name__}', '{self.eyes}', '{self.hairs}')"
+        return f"Vector : ('{type(self).__name__}', '{self.eyes}', " \
+            f"'{self.hairs}')"
 
 
 class Lannister(Character):
@@ -39,4 +41,5 @@ class Lannister(Character):
         return f" : ('{type(self).__name__}', '{self.eyes}', '{self.hairs}')"
 
     def __repr__(self):
-        return f"Vector : ('{type(self).__name__}', '{self.eyes}', '{self.hairs}')"
+        return f"Vector : ('{type(self).__name__}', '{self.eyes}', " \
+            f"'{self.hairs}')"

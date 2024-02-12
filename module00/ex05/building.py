@@ -2,6 +2,7 @@ import sys
 
 
 def main():
+    """starting"""
     char_punct = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     try:
         if len(sys.argv) == 1:

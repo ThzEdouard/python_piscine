@@ -1,4 +1,5 @@
 def ft_filter(funct, it):
+    """filter"""
     ret = []
     for its in it:
         if funct(its):

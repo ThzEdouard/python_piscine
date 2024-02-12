@@ -3,6 +3,7 @@ from functools import wraps
 
 def callLimit(limit: int):
     count = 0
+
     def callLimiter(function):
         @wraps(function)
         def limit_function(*args: any, **kwds: any):

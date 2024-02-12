@@ -1,4 +1,5 @@
 def ft_tqdm(lst: range) -> None:
+    """progess bar"""
     total = len(lst)
     for i, item in enumerate(lst):
         progress = (i + 1) / total * 100

@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 
 def generate_id() -> str:
-    return "".join(random.choices(string.ascii_lowercase, k = 15))
+    return "".join(random.choices(string.ascii_lowercase, k=15))
 
 
 @dataclass
@@ -14,5 +14,6 @@ class Student:
     active: bool = True
     login: str = field(init=False)
     id: str = field(default_factory=generate_id, init=False)
+
     def __post_init__(self):
         self.login = "E" + self.surname
