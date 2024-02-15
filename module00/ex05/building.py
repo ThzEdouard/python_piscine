@@ -6,7 +6,10 @@ def main():
     char_punct = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     try:
         if len(sys.argv) == 1:
-            string = input("What is the text to count?\n")
+            print("What is the text to count?")
+            for line in sys.stdin:
+                string = line
+                break
         elif len(sys.argv) == 2:
             string = sys.argv[1]
         elif len(sys.argv) > 2:
