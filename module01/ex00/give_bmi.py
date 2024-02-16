@@ -3,6 +3,7 @@ import numpy as np
 
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
+    """Calculate BMI from heights and weights."""
     if not all(isinstance(x, (int, float)) for x in height):
         if not all(isinstance(x, (int, float)) for x in weight):
             raise ValueError("list in not int or float")
@@ -13,6 +14,7 @@ def give_bmi(height: list[int | float],
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """Apply BMI limit and return boolean list."""
     ret = []
     for i, value in enumerate(bmi):
         if value < limit:

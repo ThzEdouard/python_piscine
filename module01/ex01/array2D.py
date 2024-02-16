@@ -2,6 +2,7 @@ import numpy as np
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    """Prints shape and returns truncated 1D list."""
     if not isinstance(family,  list):
         raise ValueError("'family' argument must be a list.")
     if not isinstance(start, int) or not isinstance(end, int):

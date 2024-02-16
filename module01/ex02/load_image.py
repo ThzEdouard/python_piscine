@@ -3,12 +3,12 @@ import numpy as np
 
 
 def ft_load(path: str) -> np.array:
+    """Loads image from path and returns its numpy array."""
     try:
         img = Image.open(path)
     except FileNotFoundError:
-        return "Error: The file '{path}' was not found."
-    h, w = img.size
-    print(f"The shape of image is: ({w}, {h}, 3)")
+        return f"Error: The file '{path}' was not found."
     img_array = np.array(img)
+    print(f"The shape of image is: {img_array.shape}")
     img.close()
     return img_array
